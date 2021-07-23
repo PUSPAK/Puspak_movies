@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tv_show_list_item_padding">16dp</dimen>
+    <dimen name="progress_bar_padding">180dp</dimen>
+    <dimen name="tv_show_list_item_margin">16dp</dimen>
+    <dimen name="tv_show_list_item_title_margin_start">16dp</dimen>
+    <dimen name="tv_show_list_item_title_margin_top">16dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="default_text_size">16sp</dimen>
+    <dimen name="title_text_size">18sp</dimen>
+    <dimen name="episode_dialog_padding">16dp</dimen>
+    <dimen name="favorite_icon_size">36dp</dimen>
+    <dimen name="home_margin">16dp</dimen>
+    <dimen name="favorite_list_margin_top">16dp</dimen>
+</resources>

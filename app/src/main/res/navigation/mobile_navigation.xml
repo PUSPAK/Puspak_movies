@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="org.demo.lowsproject.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_title_to_about"
+            app:destination="@id/fragment_tv_show_detail"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_tv_show_detail"
+        android:name="org.demo.lowsproject.ui.detail.TvShowDetailFragment"
+        tools:layout="@layout/tv_show_detail_fragment"
+        android:label="@string/tv_show_detail"/>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="org.demo.lowsproject.ui.favorite.FavoritesFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_title_to_about"
+            app:destination="@id/fragment_tv_show_detail" />
+    </fragment>
+</navigation>

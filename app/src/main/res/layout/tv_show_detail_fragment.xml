@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_show_card"
+    android:layout_marginLeft="@dimen/tv_show_list_item_margin"
+    android:layout_marginRight="@dimen/tv_show_list_item_margin"
+    android:layout_marginBottom="@dimen/tv_show_list_item_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/tv_show_list_item_padding"
+    android:paddingTop="@dimen/tv_show_list_item_padding"
+    android:paddingRight="@dimen/tv_show_list_item_padding"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/episode_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_show_name"
+            android:layout_width="0dp"
+            android:textSize="@dimen/title_text_size"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tv_show_list_item_title_margin_start"
+            app:layout_constraintEnd_toStartOf="@id/favorite_icon"
+            app:layout_constraintStart_toEndOf="@id/episode_poster"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/favorite_icon"
+            android:layout_width="@dimen/favorite_icon_size"
+            android:layout_height="@dimen/favorite_icon_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_baseline_favorite_border_24"/>
+
+        <ImageView
+            android:id="@+id/unfavorite_icon"
+            android:layout_width="@dimen/favorite_icon_size"
+            android:layout_height="@dimen/favorite_icon_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            android:src="@drawable/ic_baseline_favorite_24"/>
+
+        <TextView
+            android:id="@+id/episode_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tv_show_list_item_title_margin_start"
+            android:layout_marginTop="@dimen/tv_show_list_item_title_margin_top"
+            android:textSize="@dimen/default_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/episode_poster"
+            app:layout_constraintTop_toBottomOf="@id/tv_show_name" />
+
+        <TextView
+            android:id="@+id/episode_season"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tv_show_list_item_title_margin_start"
+            android:layout_marginTop="@dimen/tv_show_list_item_title_margin_top"
+            android:textSize="@dimen/default_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/episode_poster"
+            app:layout_constraintTop_toBottomOf="@id/episode_number" />
+
+        <TextView
+            android:id="@+id/episode_summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_show_list_item_title_margin_top"
+            android:textSize="@dimen/default_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/episode_poster" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tv_show_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/episode_summary"
+            tools:listitem="@layout/episode_list_item" />
+
+        <ProgressBar
+            android:id="@+id/episode_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/episode_summary"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
